@@ -1,0 +1,4 @@
+- [posts.rb row 78](https://github.com/mojombo/jekyll/blob/v1.3.0/lib/jekyll/post.rb#L78) - lowercase conversion of categories should be option (default enabled?)
+- [Jekyll plugins readme](https://github.com/recurser/jekyll-plugins/blob/master/README.markdown) - wrong descriptor for categorytitle_prefix_, should be category_title_prefix
+- Jekyll-plugins template for categories should be user-nameable
+- Jekyll-plugins don't need category_title_prefix in template file, can use own text + {{ page.category }} in template

@@ -1,0 +1,265 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300italic,300);
+
+body {
+	background: #111 url(data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAGklEQVR42mMQhAEJCQkGOAtIMsBZIA6cBQQAW5wDhYzvi1MAAAAASUVORK5CYII%3D);
+    color: #fff;
+#	font: 62.5% Lucida Grande, Arial, sans-serif; /* Reset to 10px equivilent */
+	font: 300 16px/26px lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 50px;
+}
+
+main
+{
+    display: block
+}
+
+a {
+    color: #81a2be;
+    text-decoration: none;
+}
+
+#content a:hover {
+    border-bottom: 1px dotted #81a2be;
+}
+
+a img {
+	border: 0;
+	border-radius: 2px;
+}
+
+
+#header {
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+height: 44px;
+z-index: 99;
+padding: 0 15px;
+background-color: #000000;
+}
+
+#headertitle {
+    float: left;
+}
+
+#headertitle h1 {
+    line-height: 44px;
+	vertical-align: middle;
+	margin: auto;
+}
+
+#headertitle h1 a {
+    color: #fff;
+}
+
+#lastname {
+    display: none;
+}
+
+#networklinks {
+    float: right;
+}
+
+#networklinks img {
+	margin: 10px;
+}
+
+#content {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.postwrapper {
+    padding-bottom: 10px;
+}
+
+.postheader {
+#    overflow: auto;
+#    border-bottom: 1px solid #eeeeee;
+}
+
+.postheader h1, .postheader h1 a {
+    line-height: initial;
+    margin-bottom: 12px;
+    color: indianred;
+}
+
+.postheader h1 a:hover {
+    border-bottom: 1px dotted indianred;
+}
+
+.meta {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.postcontent {
+    font-size: 1.0rem;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+
+/* SKILLS */
+section#skills section {
+    display: table-cell;
+    vertical-align: top;
+    margin: 0;
+    padding: 0 4px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+#skills > div.skills {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+.skills h3 {
+    font-size: 104%;
+}
+
+.skills ol {
+    list-style: none;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 6px 0;
+}
+
+/* Skill coloring */
+section.skills-transferable, #languages div.skills-transferable, #experience > .skills-transferable > .projects > .project  {
+    background-color: rgba(204, 204, 204, 0.2);
+}
+
+ol.skills-transferable li {
+    background-color: rgba(204, 204, 204, 0.2);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 0 4px;
+    color: #fff;
+}
+
+section.skills-dev {
+    background-color: rgba(153, 153, 204, 0.2);
+}
+
+ol.skills-dev li {
+    background-color: rgba(153, 153, 204, 0.5);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 0 4px;
+    color: #fff;
+}
+
+section.skills-automotive {
+    background-color: rgba(153, 204, 153, 0.2);
+}
+
+ol.skills-automotive li {
+    background-color: rgba(153, 204, 153, 0.5);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 0 4px;
+    color: #fff;
+}
+
+
+
+section.experience, section.education, #experience > section.skills-transferable, #interests section.skills-transferable, #languages > .skills-transferable {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 10px 0;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 2px;    
+}
+
+
+section.experience > header, section.education > header, #experience > section.skills-transferable > header, #interests section.skills-transferable > header {
+    display: table-cell;
+    vertical-align: top;
+    width: 150px;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+}
+
+#languages div.skills-transferable > section {
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px 10px 10px 10px;
+    text-align: center; 
+}
+
+div.projects, #experience div.skills-transferable {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.projects section:last-of-type {
+    margin-bottom: 0;
+}
+
+div.dummy {
+    display: table-cell;
+}
+
+.project {
+    padding: 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 2px;  
+/*
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+*/
+}
+
+.experience, .experience .project {
+    background: rgba(129, 162, 190, 0.2);
+    background: rgba(153, 153, 255, 0.2);
+    background: rgba(153, 153, 204, 0.2);
+    color: rgb(255, 255, 255);
+}
+
+.education, .education .project {
+    background: rgba(205, 92, 92, 0.2);
+    background: rgba(153, 204, 102, 0.2);
+    background: rgba(102, 204, 153, 0.2);
+    background: rgba(102, 204, 102, 0.2);
+    background: rgba(153, 255, 153, 0.2);
+    background: rgba(153, 204, 153, 0.2);
+    color: rgb(255, 255, 255);
+}
+
+p.description {
+    display: none;
+}
+
+section header * {
+margin: 0px;
+}
+
+
+
+@media screen and (min-width: 480px) {
+#lastname {
+    display: inline;
+}
+.postheader h1 {
+    font-size: 2.4rem;
+}
+}

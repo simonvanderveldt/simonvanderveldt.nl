@@ -1,0 +1,17 @@
+{% include header.html %}
+
+<article id="content">
+    <header class="postheader">
+        <h1>{{ page.title | markdownify }}</h1>
+        {% if page.categories %}
+        <p class="meta"> 
+            {% if page.path contains '_posts' %}
+                {{ page.date | date: '%d %B %Y' }} in {{ page.categories  | category_links }}
+            {% else %}
+                {{ page.categories }}
+            {% endif %}
+        </p>
+        {% endif %}
+    </header>
+    {{ content }}
+</article>
