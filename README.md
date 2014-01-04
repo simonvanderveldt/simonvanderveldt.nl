@@ -1,4 +1,6 @@
-simonvanderveldt.github.io
-==========================
+# simonvanderveldt.github.io
 
-compile html and source for simonvanderveldt.nl
+
+Source for simonvanderveldt.nl
+
+Needs Jekyll, for more info see http://simonvanderveldt.nl/about
