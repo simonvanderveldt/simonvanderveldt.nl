@@ -1,8 +1,0 @@
-<article class="postwrapper">
-    <header class="postheader">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <p class="meta">{{ post.date | date: '%d %B %Y' }} in {{ post.categories | category_links }}</p>
-    </header>
-<!-- somehow excerpts don't work for postst with codefenced blocks, so using below workaround for now        {{ post.excerpt | markdownify }} -->
-        {{ post.content | split: '</p>' | first | markdownify | append: '</p>' }}
-</article>

@@ -1,9 +1,0 @@
----
-layout: default
----
-
-<div><span class="meta">Posts in category</span> {{ page.category }}</div>
-
-{% for post in site.categories[page.category] %}
-    {% include list_posts.html %}
-{% endfor %}
