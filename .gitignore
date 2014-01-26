@@ -1,0 +1,7 @@
+*.py[co]
+
+# nikola
+cache
+_site
+.doit*
+Guardfile
