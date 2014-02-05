@@ -1,0 +1,70 @@
+language: python
+
+python: "2.7"
+
+branches:
+  only: source
+
+env:
+  global:
+  - secure: CPaQpXrUdqpKF5JoOYQOb0OsbIwTuBYEyKABbTqbfMpdupQptNhmtEFI2UWM+1QTLv9R7WweBHPF1N/LHPs9ylBEdffedLHbeDtac5q8XXS7Rw9Mr/eb02JrkAJNqVgwDAwb/1vHCwTbG8ma+CJ0uGn7QjAaVjo2GKRzlhVXvpc=
+  - secure: DY/YZ/7jcSH1ZWe+4KY0435Nz2X6zGO1INXw738P+AZAcACZeyWtMq5U4X1T3tCoVHwHuIGV29caM1kwOc1QJgXi+ncKjRg6Nxg8f7+kug4kcskkDYjgAg8uwHbi9f0kE0KeHYe3Ig/8T/56lZo5xJKU41g8zXB73ebyCwpwPCM=
+  - secure: QQR5JZw0pE37KD0YRC/hYmDGQz1MrN4otLlD0gqTQBJvYisNpQvTYm6/Z1QdyjqmAKrtCUD0gW6TusVI9omlJ2sGGMEI2Dd5Zpwks3k+uS3o/Y+/ptHpwZfkfgsmJ2nODOvYWNY7Sf/9qrG3iLj11sqeSDPpQ4yFB3SLfjzTQPY=
+  - secure: CK/NQkIpu4kkrS7fRNGGeoUOkjqsfnRi87v+afNNoPSLSksQ1RWBzPCiAmLlrOU7MI3dc5ooNWcOs3/ypY4ZdJwT8MMHlP1zbAhvAtDWDmniROEvV8HVivCQPzz8ePFrJOywfc/6C6KHZg7Jh1UirFCSNWs4p5vq0qGl/9pQPSg=
+  - secure: NlB12+QwbjGFpTVSMVexy7EmaOuIrOOnSR73Z/d6k9k1UjRBfVG7kViGs2l/jnVdbAYNOcnFN706WnpTDD1UtyA+bDtIpATzNB0LeQHIUozmPoSnXJicvZEDnz/8Fnh7epSyEYVl3kHfIHPNu2MotBd6npnkWFsLxikATDj4a88=
+  - secure: MF9zD9sbPfhIGvOiUjzC9h33chcawK3N2rJROkCWYBWY5j8awlkAAUZk38aveuLB4RVg/pcC3mI40o7wv+ZfHtHFi4YX9JgshjbtlO/f4dEWLv1XwnCPmUKNgrfCM14hyM0It4kp0/q+wus+aEfQrYJ5mD+TnP1nsxQtZwddQWE=
+
+notifications:
+  email:
+    recipients:
+      - esnuco.pet@gmail.com
+    on_success: always
+    on_failure: always
+
+
+before_install:
+  - remotesha=`git rev-parse origin/master`
+  - echo $remotesha
+  - localsha=`git rev-parse HEAD`
+  - echo $localsha
+  - range="${remotesha}..${localsha}"
+  - echo $range
+  - sourcecommitmessages=`git log --pretty=format:%B $range`
+  - echo $sourcecommitmessages
+  - deploy=`git rev-list -n 1 --grep '[deploy]' "$range"`
+  - commitmessage=`printf "Deploy compiled site from source commit $localsha \n$sourcecommitmessages"`
+  - echo $commitmessage
+  - git config --global user.email "travis@travis-ci.com"
+  - git config --global user.name "travis"
+
+
+install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq libxml2-dev libxslt1-dev yui-compressor
+  - pip install -r requirements.txt
+
+
+script:
+  - nikola build
+
+
+after_success:
+- if [[ "$TRAVIS_BRANCH" == "source" ]] && [ -n "$deploy" ]; then
+  echo "Deploying to master" &&
+  nikola clean &&
+  rm -rf '_site' &&
+  nikola build &&
+  nikola deploy &&
+  git stash &&
+  git checkout -b temp1 &&
+  git add -f _site/ &&
+  git commit --allow-empty-message -m '' &&
+  git subtree --prefix=_site/ split -b temp2 &&
+  git checkout master &&
+  git merge --squash -X theirs temp2 &&
+  git commit -m "$commitmessage" &&
+  git branch -D temp1 &&
+  git branch -D temp2 &&
+  git log $range &&
+  git checkout source &&
+  git stash pop
