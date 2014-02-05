@@ -1,6 +1,7 @@
 language: python
 
-python: "2.7"
+python:
+  - "2.7"
 
 branches:
   only: source
@@ -49,22 +50,23 @@ script:
 
 
 after_success:
-- if [[ "$TRAVIS_BRANCH" == "source" ]] && [ -n "$deploy" ]; then
-  echo "Deploying to master" &&
-  nikola clean &&
-  rm -rf '_site' &&
-  nikola build &&
-  nikola deploy &&
-  git stash &&
-  git checkout -b temp1 &&
-  git add -f _site/ &&
-  git commit --allow-empty-message -m '' &&
-  git subtree --prefix=_site/ split -b temp2 &&
-  git checkout master &&
-  git merge --squash -X theirs temp2 &&
-  git commit -m "$commitmessage" &&
-  git branch -D temp1 &&
-  git branch -D temp2 &&
-  git log $range &&
-  git checkout source &&
-  git stash pop
+  - if [[ "$TRAVIS_BRANCH" == "source" ]] && [ -n "$deploy" ]; then
+    echo "Deploying to master" &&
+    nikola clean &&
+    rm -rf _site &&
+    nikola build &&
+    nikola deploy &&
+    git stash &&
+    git checkout -b temp1 &&
+    git add -f _site/ &&
+    git commit --allow-empty-message -m '' &&
+    git subtree --prefix=_site/ split -b temp2 &&
+    git checkout master &&
+    git merge --squash -X theirs temp2 &&
+    git commit -m "$commitmessage" &&
+    git branch -D temp1 &&
+    git branch -D temp2 &&
+    git log $range &&
+    git checkout source &&
+    git stash pop;
+    fi
