@@ -6,19 +6,8 @@ python:
 branches:
   only: source
 
-env:
-  global:
-  - secure: CPaQpXrUdqpKF5JoOYQOb0OsbIwTuBYEyKABbTqbfMpdupQptNhmtEFI2UWM+1QTLv9R7WweBHPF1N/LHPs9ylBEdffedLHbeDtac5q8XXS7Rw9Mr/eb02JrkAJNqVgwDAwb/1vHCwTbG8ma+CJ0uGn7QjAaVjo2GKRzlhVXvpc=
-  - secure: DY/YZ/7jcSH1ZWe+4KY0435Nz2X6zGO1INXw738P+AZAcACZeyWtMq5U4X1T3tCoVHwHuIGV29caM1kwOc1QJgXi+ncKjRg6Nxg8f7+kug4kcskkDYjgAg8uwHbi9f0kE0KeHYe3Ig/8T/56lZo5xJKU41g8zXB73ebyCwpwPCM=
-  - secure: QQR5JZw0pE37KD0YRC/hYmDGQz1MrN4otLlD0gqTQBJvYisNpQvTYm6/Z1QdyjqmAKrtCUD0gW6TusVI9omlJ2sGGMEI2Dd5Zpwks3k+uS3o/Y+/ptHpwZfkfgsmJ2nODOvYWNY7Sf/9qrG3iLj11sqeSDPpQ4yFB3SLfjzTQPY=
-  - secure: CK/NQkIpu4kkrS7fRNGGeoUOkjqsfnRi87v+afNNoPSLSksQ1RWBzPCiAmLlrOU7MI3dc5ooNWcOs3/ypY4ZdJwT8MMHlP1zbAhvAtDWDmniROEvV8HVivCQPzz8ePFrJOywfc/6C6KHZg7Jh1UirFCSNWs4p5vq0qGl/9pQPSg=
-  - secure: NlB12+QwbjGFpTVSMVexy7EmaOuIrOOnSR73Z/d6k9k1UjRBfVG7kViGs2l/jnVdbAYNOcnFN706WnpTDD1UtyA+bDtIpATzNB0LeQHIUozmPoSnXJicvZEDnz/8Fnh7epSyEYVl3kHfIHPNu2MotBd6npnkWFsLxikATDj4a88=
-  - secure: MF9zD9sbPfhIGvOiUjzC9h33chcawK3N2rJROkCWYBWY5j8awlkAAUZk38aveuLB4RVg/pcC3mI40o7wv+ZfHtHFi4YX9JgshjbtlO/f4dEWLv1XwnCPmUKNgrfCM14hyM0It4kp0/q+wus+aEfQrYJ5mD+TnP1nsxQtZwddQWE=
-
 notifications:
   email:
-    recipients:
-      - esnuco.pet@gmail.com
     on_success: always
     on_failure: always
 
@@ -37,6 +26,8 @@ before_install:
   - echo $commitmessage
   - git config --global user.email "travis@travis-ci.com"
   - git config --global user.name "travis"
+  - sudo chmod +x /usr/share/doc/git/contrib/subtree/git-subtree.sh
+  - sudo ln -s /usr/share/doc/git/contrib/subtree/git-subtree.sh /usr/lib/git-core/git-subtree
 
 
 install:
