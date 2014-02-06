@@ -13,16 +13,16 @@ notifications:
 
 
 before_install:
-  - remotesha=`git rev-parse origin/source`
-  - echo $remotesha
-  - localsha=`git rev-parse HEAD`
-  - echo $localsha
-  - range="${remotesha}..${localsha}"
+  - prevdeploysha=`git log --grep='[deploy]' -1 --skip=1 --pretty=format:%H`
+  - echo $prevdeploysha
+  - currdeploysha=`git rev-parse HEAD`
+  - echo $currdeploysha
+  - range="${prevdeploysha}..${currdeploysha}"
   - echo $range
   - sourcecommitmessages=`git log --pretty=format:%B $range`
   - echo $sourcecommitmessages
   - deploy=`git rev-list -n 1 --grep '[deploy]' "$range"`
-  - commitmessage=`printf "Deploy compiled site from source commit $localsha \n$sourcecommitmessages"`
+  - commitmessage=`printf "Deploy compiled site from source commit $currdeploysha \n$sourcecommitmessages"`
   - echo $commitmessage
   - git config --global user.email "travis@travis-ci.com"
   - git config --global user.name "travis"
