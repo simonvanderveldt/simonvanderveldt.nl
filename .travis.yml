@@ -13,7 +13,7 @@ notifications:
 
 
 before_install:
-  - remotesha=`git rev-parse origin/master`
+  - remotesha=`git rev-parse origin/source`
   - echo $remotesha
   - localsha=`git rev-parse HEAD`
   - echo $localsha
@@ -58,7 +58,6 @@ after_success:
     git commit -m "$commitmessage" &&
     git branch -D temp1 &&
     git branch -D temp2 &&
-    git log $range &&
     git checkout source &&
     git stash pop;
     fi
