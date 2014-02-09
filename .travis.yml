@@ -11,6 +11,33 @@ notifications:
     on_success: always
     on_failure: always
 
+env:
+  global:
+    #Encrypted GitHub deploy key
+    - secure: "a0tXezAiIF5QpwaWXeGrh0bhqVQf2q+Vx8DbWcFnX6oPINB9GlNBglcuRv3AvL42hkmJIxnG4y0u8QaHozeYHjWYDKhWfuKFgmx0mpuGE7vWMfaywg8R5J5fqw07Ea5QKVfuspDou+w7F13/Bt+0w0huyGFsduZe2K+FK8V/3pA="
+    - secure: "AE+ySmi8o1ZzuLetwhaGjYEyy7C27KOfyoAJFUrVMhPSX/x8fYlhq56vX2uE+53h2yMUyu7iveSvdTJ/9wWGEzCKEA2ejQ1VAFkvHxtfHfHF2GRtLiAY4QUdpcHwbWdwgaa67lVIDmhD6zzDJz2BeQ5OADBpj4wQ5Y+01pVf37o="
+    - secure: "N5sZmj6bOHuCXk/ir05SBB6i7wXkHpMfddQfKkv7o7Qa9iBtvs09vNOX4G6Y1O+IC78CC/hg1d+1fz3z5bLK3fD+g1Iqq5wX350m05isIVujwiGaHGTiOqTh7hh3VJsZ8kMkFbOnpQRV4fLtpJBkP9cwltcldk6M4l3vBbZsr1M="
+    - secure: "X/VJFLD+RS27gPMClAWhKXSQggoPlQbyi/Q+5r/CYEmU23TJsODhudjACFUmV9qYPn7YagRwj1Pu2LNUKXJpw0a507JK3fs9/rLj9YOFAnA36NkJFXBiBg+OcmltS7b3gFcEI21YcKQYI3lmw/PopRJWCEZZWjFuZNUwXqrF+Ok="
+    - secure: "Avb6K9ZwC8Qjszmjh5cBpvvlWmk5C2RLj2tWTrGFTYGCSJ8lMESHib/cYF7LQvm9JyVkp++U7b0/sNcvGlDw+Z/2C7YWc20/iBO5fI/ZRfu4tgAippFBqTrc+kA0zifh4byXfTBcCECJEyjNoTwhpQOEsgAdVZNkFBoInUAfy8M="
+    - secure: "gPlcB6G+1AWT1Y49am51KNAeo+srQ0vZM0bvlOvmZwlyCs1xKzqaHmLhJXRb+xP5IIXYjCeMUudDkVjOLkPxdfMZqT6K+3/AhurDqTd4xPVfOnhUrpQBtCTvAT57G8Staf4kKZND9pzJz/5lCW5VsLvJp5uQEhxMCweH00ZVMKI="
+    - secure: "F17o21MBw3lrknqqiTzao1/qTRkfEeLV48ZOOhqXhkCIQXXTYVPFSG2FGW1BXEEr9gVSz/yXTLwWJ+/c7uTUCDU/adeiAnVZZhASfeTCGuavnZ7t5o4WHPtNv4bUpTRHCQQhhwuHd390lgWVuTB8jaHmgyXycCWu/iKdtvzlaFI="
+    - secure: "JpbpJjF53vNdT2SW/IPBX42SY3BRS6J7M4ZRgGpdqdjSIHbbO5MzPtckmKX8aBaE1ywI/JbnRZDXDpExjkUYIdTFstD2hkRayJenkrpfBwEc3GLK/dLNA1pV46k/VRBT5Oo8zAxiJ5AmcOH7dIM05lch+/KXSBM4bK9uAlqk81U="
+    - secure: "fPYlcyUvqzKADMsTKXlPn0nG7tpW9KmjeAcqi9RMOmBkMlLpIxkLg6AKUbA3JL3Q95EzDeHM7m7TlJipXuSMdE4y3a51tpWW/nKt5I9C+Y3v1flZ8cf5iCSat21BdHs+HBbMcSvs1CVvak9l4Js9dovG1xj4hCP52U8QgLzSKmo="
+    - secure: "OoAGIePGPpu2EkUEy4JdBOW/gsGCoh248z2ib+35WNxvC/kcvPDecj20T5OWmjDL2/SkpVkMeO6G88sS8827QGnm8OW2yISnh8LaucdVEWCJWEfPiTf4KrzwqzFPMdHeGWPSun9DCCv3SdXo52GHKByWjmjrvokbFyVy13fYpCw="
+    - secure: "bkBNsGAwpqu2E8QXw4Uk23U0kU6hiFfpBoI/sZWcrQ2Vwkrfhgt7Ist8dP6O9T2KYUhOYcLQI2X3MyE/XQsH2IabngzXX0oIXopzDsvBA/HMTwVk8lcd9w5hgD4igA+7yCjVCDsPYbF5Eusa0tvD6LYTkIcud2KUSzOz9oQ7EeE="
+    - secure: "SxVsHynnrMYXfcU7S62QhvFsZIZpSvGpsbF5Y9GwT8SJlO4S9MNBA9lftjqlXrhQY08aqawza41Psu28RPqNhnsqJA5efbWolhjGGP20+hDAx0HKsIXbzqzdG2cnyNtcdnn4xRIFWV4nasKieoPGX6aFOsGFflos08jPoEEJF3Y="
+    - secure: "JET2O9zBYUFuAhu4OJQtRRi7GrZ5HVpxCW+wOpEGA5F0Vs1KrSHd/XFfZH//GPZZiJYcbTZJ5OZC5wfjMtf7xc3ZkAz2VE9ZuvAXC9R0ClSUqnjfONQYzR+BjyOeMObbbonVVnPHN0Q4jNW0sYVlnG7vC3HaubvxF4YDrh5ZQRY="
+    - secure: "LcsXKaAdjFNMiqGMxX9YKAatsoNeNH6qdofD/Eji7FcgmhnMTEiCsJiiQ2UHe2ynNDiHafWjWSpC0xdquzwn19je5DLYQGJgFCgWjxAjYPnt66mlNvN/rn33/p8SgP1MAK/456lXc77HAjSQXtADNv7bKmXR7LFUo5ZQmJhsMcE="
+    - secure: "byuNWnrlOzzEaZsd+y10/H0NwHFNE9xZXxhp4DrUKTyH+nqxQO4zHktZrbGaFN/abKHE4KiJAWG+Qh00CWuXkHdb2BeGDtkIgLBoMltt4yu4TFI3K0P4aBs+UOkB3/Nv0h+WVW7cRvIRq5DHueLUY9CtrvLfYNBUu3A8b9U0m58="
+    - secure: "GlqOgF1Mq+/1DaRhMzkg8s30OPx6T3bozxO3sy2OVCGY+iiLq2frlozcnVTIIm6QgYIRyz1bY2mGJOIzccExzxugNTWdkQlDs793jISglxTHEiCphrRXH+scRmMB2SC6oHv9fVtj1QflZ55kq3w8sxBTE+fDigFXh5xUVnSkQFk="
+    - secure: "cfHTDFqve2PUe4dYgXzAKDdrSjdH4ZL9VrkhJeiql5sPJ3S/J/QyrI26oHva6I7/7Q7TigWvCQjS9E2LgHROhDru8qIf9d4sS07xbTo9mAptZxpGLzaqVh2o5TjEyssTklI3xXNfkJdU+5Gc3ZJQyYOUWbWSd9M8OPq8lIHIe48="
+    - secure: "I7Rl6f1jSsiU9BPlHFAdoZlgJ86nE2qDZTBbhJrnIwG7KU7yU/OcRzAk8YN/9U4hPPAV7WqfLRyv8fsosAKEyQdF+Wu+TVSgEFf2AAeHB8zSV5utxwfZsB67dJhjfOGoKUv6E5chWH0dxxDIJv+9BhnMotd2Ga1NibQLXGHky48="
+    - secure: "IIQ4T2hlMdMruWcXhmsaQ70sKKSEOSx9sYREb4dKtdg4ak9aprn8ht97To/Cx6t8FRb7Z2r8Gh9qXUK/4IfJFrTN+5AzYXn5P6oj+q7fSEXdNel2H4x6RsYia1msLaYClU4PzpyPZAlulYb8SPhEN32FeKgtQXkUzHuxbUBy4cQ="
+    - secure: "ieCbhlDIs51WL65QNa1mErXt7aOWcpmiGyIofop8zW8pv2aNsQrL/oHARzoJOBdJQMkLUz954ADf97OARkaqbnMm0lH0HI+K7WSfYPXre6d9cLN8EGnRqJYs7YOuzRhl5zogL5IwS7RNsB4u4ZTDpWyg9ZKH3lhXQJrbK25fGoQ="
+    - secure: "Q5owhzPWcyH6Ec3JiUh6+b3gPBvtqyYraCPEeNFqgFlgNDDQRLhJFv6QV2nER3vgxfrvhmMcndtsAgSOAix9eaW8lHqUsr+hz1IWse8kJJzHO7ip1QOp/4mEwJ65ej8FvFtARwooA1a0IV6aNn1Lo0T4rs71Rr8VLkkr+OLs+t8="
+    - secure: "DDJqy3iKApSVwPHaxTYb1BlGc9pQAFT/NvAP/75Y6oXqtJiZQAiulhj9/JI1PUI5rW1ETS3Y42iG457p5dPwr6wLwu07FCjIxY+C3u8XBkbyOEe6xKnIO71EQmQ+X//iKBRweFC5oTktbV+yPLgi5AmJfx7FQpmLy2TCvxHANh0="
+    - secure: "c3XgQ25X1PxXC5Fd6qstMggOLo/zFjYC4q0975cVaC3o7JfVTA0+doeo0XqTCbRzuWIAiMz27nyJebsJmco4O47dsKdXD0e5JOa0Cst5D5Gn8mKUiQaaT1p2O1BkPwTN7OI62Xb/AuW+ixJs1zdCbkaLGv+/Ji6xPJq3Uh7udXk="
+
 
 before_install:
   - prevdeploysha=`git log --grep='[deploy]' -1 --skip=1 --pretty=format:%H`
@@ -41,7 +68,11 @@ script:
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "source" ]] && [ -n "$deploy" ]; then
     sudo chmod +x /usr/share/doc/git/contrib/subtree/git-subtree.sh &&
-    sudo ln -s /usr/share/doc/git/contrib/subtree/git-subtree.sh /usr/lib/git-core/git-subtree &&    
+    sudo ln -s /usr/share/doc/git/contrib/subtree/git-subtree.sh /usr/lib/git-core/git-subtree &&
+    echo -n $id_rsa_{00..30} >> ~/.ssh/id_rsa_base64 &&
+    base64 --decode --ignore-garbage ~/.ssh/id_rsa_base64 > ~/.ssh/id_rsa &&
+    chmod 600 ~/.ssh/id_rsa &&
+    echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config &&
     echo "Deploying to master" &&
     nikola clean &&
     rm -rf _site &&
