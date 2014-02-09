@@ -40,7 +40,7 @@ env:
 
 
 before_install:
-  - prevdeploysha=`git log --grep='[deploy]' -1 --skip=1 --pretty=format:%H`
+  - prevdeploysha=`git log --grep='\[deploy]' -1 --skip=1 --pretty=format:%H`
   - echo $prevdeploysha
   - currdeploysha=`git rev-parse HEAD`
   - echo $currdeploysha
