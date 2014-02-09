@@ -73,6 +73,8 @@ after_success:
     base64 --decode --ignore-garbage ~/.ssh/id_rsa_base64 > ~/.ssh/id_rsa &&
     chmod 600 ~/.ssh/id_rsa &&
     echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config &&
+    git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" &&
+    git remote update &&
     echo "Deploying to master" &&
     nikola clean &&
     rm -rf _site &&
