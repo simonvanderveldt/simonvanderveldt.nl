@@ -49,7 +49,7 @@ before_install:
   - sourcecommitmessages=`git log --pretty=format:%B $range`
   - echo $sourcecommitmessages
   - deploy=`git rev-list -n 1 --grep '[deploy]' "$range"`
-  - commitmessage=`printf "Deploy compiled site from source commit $currdeploysha \n$sourcecommitmessages \n[ci skip]"`
+  - commitmessage=`printf "Deploy compiled site from source commit $currdeploysha [ci skip]\nContains the following changes:\n$sourcecommitmessages"`
   - echo $commitmessage
   - git config --global user.email "travis@travis-ci.com"
   - git config --global user.name "travis"
@@ -90,6 +90,5 @@ after_success:
     git commit -m "$commitmessage" &&
     git branch -D temp1 &&
     git branch -D temp2 &&
-    git checkout source &&
-    git stash pop;
+    git push origin master;
     fi
