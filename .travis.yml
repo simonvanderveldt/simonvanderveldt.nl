@@ -22,7 +22,7 @@ before_install:
   - sourcecommitmessages=`git log --pretty=format:%B $range`
   - echo $sourcecommitmessages
   - deploy=`git rev-list -n 1 --grep '[deploy]' "$range"`
-  - commitmessage=`printf "Deploy compiled site from source commit $currdeploysha \n$sourcecommitmessages"`
+  - commitmessage=`printf "Deploy compiled site from source commit $currdeploysha \n$sourcecommitmessages \n[ci skip]"`
   - echo $commitmessage
   - git config --global user.email "travis@travis-ci.com"
   - git config --global user.name "travis"
