@@ -1,15 +1,11 @@
-<!-- 
-.. link: 
-.. description: 
-.. tags: webdevelopment, jekyll
-.. date: 2013-09-09 10:00:00
-.. title: Jekyll, Github Flavored Markdown and footnotes
-.. slug: jekyll-github-flavored-markdown-and-footnotes
--->
+---
+tags: webdevelopment
+title: Jekyll, Github Flavored Markdown and footnotes
+css: code.css
+---
 
 [Jekyll](http://jekyllrb.com/) uses [redcarpet](https://github.com/vmg/redcarpet) as it's default [Markdown](http://daringfireball.net/projects/markdown/) parser for newly generated sites as of version [v1.1.0](https://github.com/mojombo/jekyll/pull/1245). It does so by setting `markdown: redcarpet` in `_config.yml`.
 Redcarpet is the markdown parser used by GitHub, but in it's default config it actually doesn't parse using the [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) (GFM) rules.
-<!-- TEASER_END -->
 
 To change this add the following to Jekyll's _config.yml:
 

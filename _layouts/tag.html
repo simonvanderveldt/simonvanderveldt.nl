@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% capture tagname %}{{ page.url | replace:'posts-about','' | replace:'/','' }}{% endcapture %}
+
+<span class="meta">Posts about {{ tagname }}</span>
+{% for page in site.tags[tagname] %}
+  {% include post.html frontpage=true %}
+{% endfor %}

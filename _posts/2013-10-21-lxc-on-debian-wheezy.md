@@ -1,29 +1,25 @@
-<!-- 
-.. link: 
-.. description: 
-.. tags: linux, virtualization
-.. date: 2013-10-21 10:00:00
-.. title: LXC on Debian Wheezy
-.. slug: lxc-on-debian-wheezy
--->
+---
+tags: containers lxc
+title: LXC on Debian Wheezy
+css: code.css
+---
 
 [LXC (LinuX Containers)](http://linuxcontainers.org) offers a lot of the advantages of (para)virtualisation with the added benefits that it can run on any kind of hardware (it doesn't need hardware support for virtualisation) with lower overhead than virtualisation.
 The virtual environments that LXC provides are comparable to a chroot but LXC adds control over the virtual environments resources like CPU-time and network-usage and offers more isolation.
 This also means it's only possible to run the same "family" of guest operating systems as the host. I.e. it's not possible to run Windows using LXC, but it is possible to run different Linux distributions like a Debian and Fedora guest on an Arch Linux host.
 Note that if you need a really secure environment LXC isn't the right choice, stick with paravirtualisation like [KVM](http://www.linux-kvm.org) or [XEN](http://www.xenproject.org) instead.
-<!-- TEASER_END -->
 
 # Installing LXC
 The LXC tools are included in the main Debian package repository, so installing it is very simple:
 
-```bash
+```console
 sudo apt-get install lxc
 ```
 
 # Creating a new container
 Creating a new container can we done with the `lxc-create` command
 
-```bash
+```console
 sudo lxc-create -n containername -t templatename
 ```
 
@@ -33,7 +29,7 @@ You will see some feedback about the container creation on your screen including
 ## LXC Templates
 LXC template are shell scripts that automate the creation of a certain type of container. The templates can be found in `/usr/share/lxc/templates/`, these are the available templates in Debian Wheezy:
 
-```bash
+```console
 ls -hl /usr/share/lxc/templates/
 > -rwxr-xr-x 1 0  12K Aug 22  2012 lxc-altlinux
 > -rwxr-xr-x 1 0  14K Aug 22  2012 lxc-archlinux
@@ -51,7 +47,7 @@ ls -hl /usr/share/lxc/templates/
 
 To use a template simply remove `lxc-` from the template's name. So to use the `lxc-debian` you only have to write `debian` as templatename.
 
-```bash
+```console
 sudo lxc-create -n containername -t debian
 ```
 
@@ -59,7 +55,7 @@ sudo lxc-create -n containername -t debian
 # Overview and status of containers
 To see if the container was created succesfully we use the `lxc-list` command. This will show all available LXC containers grouped by their status (running, frozen and stopped). Our newly created container should be listed in the stopped section.
 
-```bash
+```console
 sudo lxc-list
 >RUNNING
 >
@@ -72,13 +68,13 @@ sudo lxc-list
 # Starting a container
 Starting a container can be done with the `lxc-start` command. Note that you want to add the `-d` switch to make the container daemonize, if you don't do that it will take over your current terminal session and you won't be able to exit back to it.
 
-```bash
+```console
 sudo lxc-start -d -n containername
 ```
 
 Now if we run `lxc-list` our container is show as running
 
-```bash
+```console
 sudo lxc-list
 >RUNNING
 > containername
@@ -91,7 +87,7 @@ sudo lxc-list
 # Using a container
 To actually use a container from your host we make use of the 'lxc-console' command.
 
-```bash
+```console
 sudo lxc-console -n containername
 ```
 

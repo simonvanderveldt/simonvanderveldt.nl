@@ -1,69 +1,64 @@
-<!-- 
-.. link: 
-.. description: 
-.. tags: webdevelopment
-.. date: 2013-09-30 10:00:00
-.. title: HTML heading styling inside a section vs inside a div
-.. slug: html-heading-styling-inside-a-section-vs-inside-a-div
--->
+---
+tags: webdevelopment
+title: HTML heading styling inside a section vs inside a div
+css: code.css
+---
 
 Just quick heads-up in case someone is wondering why his or hers `<h1>` isn't looking like they expect.
 Modern browsers apply different styling for `<h1>` elements inside a `<div>` vs inside one of the [new semantic elements](http://caniuse.com/#feat=html5semantic) like `<article>`, `<aside>`, `<nav>` or `<section>`.
 This is because these new semantic elements influence the [document outline](http://html5doctor.com/outlines/) and the modern browsers try to show that to you in a graphical way.
-<!-- TEASER_END -->
 
 Both Chrome en Firefox use a so called User Agent Stylesheet to define the default styling of alle lements. This is basically just a .css file which defines the default browser styling of all elements.
 See below for en extract from both Chrome and Firefox's with the regular `<h1>` tag and 1 inside an `<article>` or `<section>` and the regular `<h2>` for comparison. Both links point to the current/tip/trunk version of the User Agent Stylesheet.
 
 Chrome's [html.css](http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css#L155):
 
-```
-#!css
+```css
 h1 {
-    display: block;
-    font-size: 2em;
-    -webkit-margin-before: 0.67__qem;
-    -webkit-margin-after: 0.67em;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    font-weight: bold
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67__qem;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold
 }
  
 :-webkit-any(article,aside,nav,section) h1 {
-    font-size: 1.5em;
-    -webkit-margin-before: 0.83__qem;
-    -webkit-margin-after: 0.83em;
+  font-size: 1.5em;
+  -webkit-margin-before: 0.83__qem;
+  -webkit-margin-after: 0.83em;
 }
 
 h2 {
-    display: block;
-    font-size: 1.5em;
-    -webkit-margin-before: 0.83__qem;
-    -webkit-margin-after: 0.83em;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    font-weight: bold
+  display: block;
+  font-size: 1.5em;
+  -webkit-margin-before: 0.83__qem;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold
 }
 ```
 
 FireFox's [html.css](https://hg.mozilla.org/mozilla-central/file/a475f94bb1b1/layout/style/html.css#l164)
 
-```
- h1 {
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    margin: .67em 0;
-  }
- 
- h2,
- :-moz-any(article, aside, nav, section)
- h1 {
-   display: block;
-   font-size: 1.5em;
-   font-weight: bold;
-   margin: .83em 0;
- }
+```css
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: .67em 0;
+}
+
+h2,
+:-moz-any(article, aside, nav, section)
+h1 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: .83em 0;
+}
 ```
 
 Both of them actually apply this behaviour for up to 5 levels deep nesting of `<article>`, `<aside>`, `<nav>` and `<section>` elements.

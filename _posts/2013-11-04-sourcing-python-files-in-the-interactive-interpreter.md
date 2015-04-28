@@ -1,14 +1,12 @@
-<!-- 
-.. link: 
-.. description: 
-.. tags: programming, python
-.. date: 2013-11-04 10:00:00
-.. title: Sourcing Python files in the interactive interpreter
-.. slug: sourcing-python-files-in-the-interactive-interpreter
--->
+--- 
+link: 
+description: 
+tags: python
+title: Sourcing Python files in the interactive interpreter
+css: code.css
+---
 
 One of the most useful features of a Linux shell I often use is sourcing of files. Sourcing a file basically means that the file's code is run as if you typed it in yourself. Everything the code in the file does is applied to the shell you're currently using and all it's global variables are added to your current shell. It's also possible to do this in Python, with the function [`execfile`](http://docs.python.org/2/library/functions.html#execfile). 
-<!-- TEASER_END -->
 
 All you have to do is run `execfile` with the path to the file you want to source as the only argument:
 
@@ -24,6 +22,7 @@ If the file you want to source is in a different directory either enter the full
 import os
 os.chdir('/path/to/directory')
 ```
+
 Note that this path notation also works on Windows (no need to type `C:\path\etc`).
 
 If you use IPython you don't need to import anything since it has [filesystem navigation](http://ipython.org/ipython-doc/rel-1.1.0/interactive/shell.html#directory-management) built in (using [magic functions](http://ipython.org/ipython-doc/dev/interactive/tutorial.html#magic-functions)), so you can just use:
