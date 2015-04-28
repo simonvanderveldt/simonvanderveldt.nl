@@ -1,5 +1,0 @@
---index-url https://pypi.python.org/simple/
-
-nikola==6.2.1
-webassets==0.9
-markdown==2.3.1
