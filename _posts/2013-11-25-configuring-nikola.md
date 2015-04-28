@@ -3,8 +3,8 @@ tags: webdevelopment python
 css: code.css
 ---
 
-After my evaluation of static site generators written in Python I started working on moving my Jekyll based site over to Nikola.
-Nikola comes with (many!) batteries included. It currently has more than 100 settings for all of its options! Since I want something as lean as possible some tweaking and workarounds were necessary to make it work the way I wanted to. This post will cover the way I configured Nikola.
+After I decided to switch this blog over from [Jekyll](http://jekyllrb.com) to [Nikola](http://getnikola.com) the first thing to do was configuring Nikola to my liking.
+Nikola offers plenty of options to configure, as of this writing it has more than 100 settings for all of its options! Since I want something as lean as possible some tweaking and workarounds were necessary to make it work the way I wanted to. This post will cover the way I configured Nikola.
 
 All of Nikola's settings are located in the file `conf.py` that is created when a new Nikola project is initilized using `nikola init projectname`.
 
