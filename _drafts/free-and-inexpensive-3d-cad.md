@@ -1,10 +1,8 @@
-<!--
-.. link: 
-.. description: 
-.. tags: CAD, draft
-.. date: 2013-10-28 10:00:00
-.. title: Free and Inexpensive 3D CAD
--->
+---
+tags: CAD
+date: 2013-10-28 10:00:00
+title: Free and Inexpensive 3D CAD
+---
 
 ## Geomagic Cubify Design
 * Website: <http://cubify.com/products/3d_design_software/>

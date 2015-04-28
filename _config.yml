@@ -11,7 +11,7 @@ exclude: ["vendor"]
 markdown: redcarpet
 highlighter: pygments
 redcarpet:
-  extensions: ["footnotes", "smart", "hard_wrap"]
+  extensions: ["footnotes", "smart", "hard_wrap", "no_intra_emphasis"]
 
 defaults:
   -
