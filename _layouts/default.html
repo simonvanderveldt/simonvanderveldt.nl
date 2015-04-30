@@ -8,7 +8,7 @@
     <link href="/assets/css/theme.css" rel="stylesheet" type="text/css"/>
     {% if page.css %}<link href="/assets/css/{{ page.css }}" rel="stylesheet" type="text/css"/>{% endif %}
     <link href="https://fonts.googleapis.com/css?family=Lato:300italic,300" rel="stylesheet" type="text/css" />
-    <link rel="alternate" type="application/rss+xml" title="${blog_title|striphtml}" href="${_link('rss', None)}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
   </head>
 
   <body>
