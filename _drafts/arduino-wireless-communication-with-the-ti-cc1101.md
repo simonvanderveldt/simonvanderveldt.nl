@@ -1,5 +1,5 @@
 ---
-tags: iot, arduino
+tags: iot arduino
 title: Arduino wireless communication with the TI CC1101
 ---
 
