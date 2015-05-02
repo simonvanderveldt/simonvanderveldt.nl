@@ -29,30 +29,13 @@
 
     <footer>&copy; 2013 - {{ site.time | date: "%Y" }} {{ site.author }} - <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Newsfeed</a></footer>
 
-    <script type="text/javascript">
-    function getScript(url,success){
-        var head=document.getElementsByTagName('head')[0]
-        var script=document.createElement('script');
-        script.src=url;
+    <script src="/assets/js/ga.js"async></script>
 
-        done=false;
-        script.onload=script.onreadystatechange = function(){
-            if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
-                done=true;
-                success();
-                script.onload = script.onreadystatechange = null;
-                head.removeChild(script);
-            }
-        };
-        head.appendChild(script);
-    }
-
-    getScript("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", function(){
-        $.ajaxSetup({
-            cache: true
-        });
-        $.getScript( "/assets/js/scripts.js" );});
-    </script>
+    {% if page.js %}
+        {% for script in page.js %}
+    <script src="{{ script }}"></script>
+        {% endfor %}
+    {% endif %}
   </body>
 
 </html>
