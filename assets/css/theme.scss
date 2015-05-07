@@ -1,38 +1,42 @@
+---
+---
+
+@import "colors";
+
 body {
-	background: #111 url(data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAGklEQVR42mMQhAEJCQkGOAtIMsBZIA6cBQQAW5wDhYzvi1MAAAAASUVORK5CYII%3D);
-    color: #fff;
+	background: $background;
+    color: $foreground;
 	font: 300 16px/26px lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-top: 20px;
 }
 
 a {
-    color: #81a2be;
+    color: $link;
     text-decoration: none;
 }
 
 a:hover {
-    border-bottom: 1px dotted #81a2be;
+    border-bottom: 1px dotted $link;
 }
 
 
-body > header h1 {
+body > header > h1 {
     line-height: 44px;
 	vertical-align: middle;
 	margin: auto auto 4px;
 }
 
 body > header a {
-    color: #fff;
+    color: $foreground;
 }
 
 
-
-header > nav a {
+body > header > nav > a {
     border-radius: 3px;
     padding: 1px 3px 2px;
 }
 
-header > nav a:hover {
+body > header > nav > a:hover {
     border-bottom: none;
     text-decoration: underline;
 }
@@ -62,18 +66,17 @@ main > article {
     padding-bottom: 10px;
 }
 
-article > header h1 {
+article > header > h1 {
     line-height: initial;
     margin-bottom: 12px;
-    color: indianred;
 }
 
-article > header h1 a {
-    color: indianred;
+article > header > h1, article > header > h1 > a {
+    color: $header;
 }
 
-article > header p, body > footer {
-    color: #aaa;
+article > header > p, body > footer {
+    color: $meta;
     font-size: 0.9rem;
 }
 
@@ -105,7 +108,7 @@ p {
     height: 0px;
 }
 
-.footnote ol {
+.footnotes ol {
     padding-left: 20px;
     font-size: 0.9rem;
 }
@@ -116,18 +119,15 @@ p {
     border-radius: 3px;
 }
 
-.alert-info {
-    background-color: #5bc0de;
-}
-
-.alert-info a {
-    color: #fff;
+.alert > a {
+    color: $foreground;
     font-weight: bold;
 }
 
-.alert-info a:hover {
-    border-color: #fff;
+.alert-info {
+    background-color: $link;
 }
+
 
 @media screen and (min-width: 480px) {
 
