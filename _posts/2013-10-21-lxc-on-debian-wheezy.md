@@ -1,6 +1,6 @@
 ---
-tags: containers lxc
 title: LXC on Debian Wheezy
+tags: virtualization containers lxc
 css: code.css
 ---
 
