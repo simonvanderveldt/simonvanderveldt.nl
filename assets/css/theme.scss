@@ -113,6 +113,10 @@ p {
     font-size: 0.9rem;
 }
 
+.highlight > pre {
+    overflow: scroll;
+}
+
 .alert {
     padding: 10px;
     margin-bottom: 20px;
