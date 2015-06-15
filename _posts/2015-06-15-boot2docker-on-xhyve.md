@@ -19,7 +19,9 @@ Building xhyve is actually as simple as can be. As documented in xhyve's [introd
 git clone https://github.com/mist64/xhyve
 $ cd xhyve
 $ make
-$ ./xhyverun.sh
+$ ./build/xhyve -h
+Usage: xhyve [-behuwxACHPWY] [-c vcpus] [-g <gdb port>] [-l <lpc>]
+...
 ```
 
 
