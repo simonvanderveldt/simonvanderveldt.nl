@@ -84,7 +84,7 @@ article > header > h1, article > header > h1 > a {
     color: $header;
 }
 
-article > header > p, body > footer {
+article > header > p, body > footer > small {
     color: $meta;
     font-size: 0.9rem;
 }
