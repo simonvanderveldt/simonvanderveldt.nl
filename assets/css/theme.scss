@@ -20,6 +20,15 @@ a:hover {
 }
 
 
+body > header, body > main, body > footer, body > article {
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
 body > header > h1 {
     line-height: 44px;
 	vertical-align: middle;
@@ -137,12 +146,11 @@ p {
 }
 
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 42em) {
 
 body > header, body > main, body > footer, body > article {
-    max-width: 36%;
-    margin: 0 auto;
-    padding: 5px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #lastname {
