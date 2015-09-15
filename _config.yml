@@ -1,5 +1,5 @@
 # Site settings
-title: Simon van der Veldt
+name: "Simon van der Veldt"
 baseurl: ""
 url: "http://simonvanderveldt.nl"
 author: Simon van der Veldt
@@ -15,6 +15,7 @@ redcarpet:
 sass:
   style: :compressed
 gems:
+  - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
 
