@@ -16,9 +16,8 @@ a {
 }
 
 a:hover {
-    border-bottom: 1px dotted $link;
+    border-bottom: 1px solid $link;
 }
-
 
 body > header, body > main, body > footer, body > article {
     max-width: 38em;
@@ -28,48 +27,26 @@ body > header, body > main, body > footer, body > article {
     padding-right: 2%;
 }
 
+body > header {
+    font-weight: bold;
+}
 
 body > header > h1 {
-    line-height: 44px;
-	vertical-align: middle;
-	margin: auto auto 4px;
+    margin: 8px auto;
 }
 
 body > header a {
     color: $foreground;
 }
 
+body > header a:hover {
+    color: $link;
+    border-bottom: none;
+}
 
 body > header > nav > a {
-    border-radius: 3px;
     padding: 1px 3px 2px;
 }
-
-body > header > nav > a:hover {
-    border-bottom: none;
-    text-decoration: underline;
-}
-
-#about {
-    background-color: #46a546;
-}
-
-#resume {
-    background-color: #669edb;
-}
-
-#linkedin {
-    background-color: #4565ac;
-}
-
-#gplus {
-    background-color: #d1492a;
-}
-
-#github {
-    background-color: #7cbae6;
-}
-
 
 main > article {
     padding-bottom: 10px;
@@ -80,8 +57,12 @@ article > header > h1 {
     margin-bottom: 12px;
 }
 
-article > header > h1, article > header > h1 > a {
+article > header > h1 > a {
     color: $header;
+}
+
+article > header > h1 > a:hover {
+    border-bottom: 1px solid $header;
 }
 
 article > header > p, body > footer > small {
@@ -93,18 +74,17 @@ p {
     word-wrap: break-word;
 }
 
-
 .pager {
     list-style: none;
     padding: 0;
 }
 
-.pager .previous {
+.pager > .previous {
     float:left;
     width: 50%;
 }
 
-.pager .next {
+.pager > .next {
     float:right;
     text-align: right;
     width: 50%;
@@ -117,7 +97,7 @@ p {
     height: 0px;
 }
 
-.footnotes ol {
+.footnotes > ol {
     padding-left: 20px;
     font-size: 0.9rem;
 }
@@ -138,26 +118,22 @@ p {
 }
 
 .alert-info {
-    background-color: $link;
+    background-color: $info;
 }
 
 .alert-warning {
-    background-color: $header;
+    background-color: $warning;
 }
 
 
 @media screen and (min-width: 42em) {
 
 body > header, body > main, body > footer, body > article {
-  padding-left: 0;
-  padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-#lastname {
-    display: inline;
-}
-
-article > header h1 {
+article > header > h1 {
     font-size: 2.4rem;
 }
 
