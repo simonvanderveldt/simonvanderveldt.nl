@@ -1,11 +1,11 @@
 ---
-title: boot2docker on xhyve
+title: Boot2docker on xhyve
 tags: virtualization containers docker
 css: code.css
 ---
 
 <div class="alert alert-warning" role="alert">
-    <strong>Be warned!</strong> This is all fairly new stuff, my machine locked up if I had run a Virtualbox machine prior to starting an xhyve machine. Don't say I didn't warn you ;)
+    <strong>Warning:</strong> This is all fairly new stuff, my machine locked up if I had run a Virtualbox machine prior to starting an xhyve machine. Don't say I didn't warn you ;)
 </div>
 [xhyve](https://github.com/mist64/xhyve) is a new hypervisor in the vein of [KVM](http://www.linux-kvm.org) on Linux and [bhyve](http://bhyve.org) on BSD. It's actually a [port](https://github.com/mist64/xhyve#what-is-bhyve) of BSD's bhyve to OS X.
 It's more similar to KVM than to Virtualbox in that it's minimal and commandline only which makes it a good fit for an always running virtual machine like boot2docker on OS X.
@@ -35,7 +35,7 @@ $ cp xhyverun.sh xhyve-boot2docker.sh
 
 xhyve currently doesn’t come with a BIOS or EFI booter. This means it's necessary to [extract](https://github.com/boot2docker/boot2docker/blob/master/doc/AUTOMATED_SCRIPT.md#extracting-initrd-and-vmlinuz64) the kernel and initrd from boot2docker and pass them to xhyve manually.
 
-The simplest way to do so is to mount the boot2docker iso which can be found in `~/.boot2docker/boot2docker.iso` and then copying the `initrd.img` and `vmlinuz64` from the `boot` directory of the mounted volume to the `boot2docker` directory. 
+The simplest way to do so is to mount the boot2docker iso which can be found in `~/.boot2docker/boot2docker.iso` and then copying the `initrd.img` and `vmlinuz64` from the `boot` directory of the mounted volume to the `boot2docker` directory.
 
 
 ## Prepare the xhyve-boot2docker.sh file
