@@ -12,7 +12,7 @@ kramdown:
   hard_wrap: true
 sass:
   style: :compressed
-gems:
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
