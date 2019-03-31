@@ -4,6 +4,10 @@ title: GitHub Pages, now with GitHub Flavored Markdown, footnotes and syntax hig
 css: code.css
 ---
 
+<div class="alert alert-info" role="alert">
+  <strong>Update:</strong> As of the first of February 2016 GitHub Pages handles GFM, footnotes and syntax highlighting out of the box, no configuration required.
+  <br>See this <a href="{% post_url 2016-06-01-github-pages-with-github-flavored-markdown-footnotes-and-syntax-highlighting-simplified %}">new post</a> for more details.
+</div>
 In contrast to what I wrote [1,5 years ago]({% post_url 2013-09-09-jekyll-github-flavored-markdown-and-footnotes %}) it's now possible to use all of [GitHub Flavored Markdown's](https://help.github.com/articles/github-flavored-markdown/) features combined with footnotes and syntax highlighting on your Jekyll site whilst still having GitHub Pages build your site for you.
 Building your site locally and then pushing the resulting HTML is a thing of the past! :)
 
