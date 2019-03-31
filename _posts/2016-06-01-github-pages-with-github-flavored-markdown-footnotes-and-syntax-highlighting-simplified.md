@@ -1,6 +1,6 @@
 ---
-tags: webdevelopment
 title: GitHub Pages with GitHub Flavored Markdown, footnotes and syntax highlighting simplified
+tags: webdevelopment
 css: code.css
 ---
 

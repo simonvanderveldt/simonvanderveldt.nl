@@ -1,6 +1,6 @@
 ---
-tags: webdevelopment
 title: HTML heading styling inside a section vs inside a div
+tags: webdevelopment
 css: code.css
 ---
 
@@ -23,7 +23,7 @@ h1 {
   -webkit-margin-end: 0;
   font-weight: bold
 }
- 
+
 :-webkit-any(article,aside,nav,section) h1 {
   font-size: 1.5em;
   -webkit-margin-before: 0.83__qem;

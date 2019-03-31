@@ -1,12 +1,10 @@
---- 
-link: 
-description: 
-tags: python
+---
 title: Sourcing Python files in the interactive interpreter
+tags: python
 css: code.css
 ---
 
-One of the most useful features of a Linux shell I often use is sourcing of files. Sourcing a file basically means that the file's code is run as if you typed it in yourself. Everything the code in the file does is applied to the shell you're currently using and all it's global variables are added to your current shell. It's also possible to do this in Python, with the function [`execfile`](http://docs.python.org/2/library/functions.html#execfile). 
+One of the most useful features of a Linux shell I often use is sourcing of files. Sourcing a file basically means that the file's code is run as if you typed it in yourself. Everything the code in the file does is applied to the shell you're currently using and all it's global variables are added to your current shell. It's also possible to do this in Python, with the function [`execfile`](http://docs.python.org/2/library/functions.html#execfile).
 
 All you have to do is run `execfile` with the path to the file you want to source as the only argument:
 
