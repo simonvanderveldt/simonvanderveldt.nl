@@ -27,12 +27,6 @@
     <footer><small>&copy; 2013 - {{ site.time | date: "%Y" }} {{ site.author }} - <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Newsfeed</a></small></footer>
 
     <script src="/assets/js/ga.js"async></script>
-
-    {% if page.js %}
-        {% for script in page.js %}
-    <script src="{{ script }}"></script>
-        {% endfor %}
-    {% endif %}
   </body>
 
 </html>
