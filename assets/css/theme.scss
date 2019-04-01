@@ -65,6 +65,21 @@ article > header > h1 > a:hover {
     border-bottom: 1px solid $header;
 }
 
+article > h2 > a.anchor,
+article > h3 > a.anchor {
+    visibility: hidden;
+}
+
+article > h2:hover > a.anchor,
+article > h3:hover > a.anchor {
+    visibility: visible;
+}
+
+article > h2 > a.anchor:hover,
+article > h3 > a.anchor:hover {
+    border-bottom: none;
+}
+
 article > header > p, body > footer > small {
     color: $meta;
     font-size: 0.9rem;

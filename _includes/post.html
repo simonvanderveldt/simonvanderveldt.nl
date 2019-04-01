@@ -9,5 +9,5 @@
     {% endif %}
     {% unless include.frontpage %} | <a href="https://github.com/simonvanderveldt/simonvanderveldt.github.io/issues/new?title=Feedback on post: {{ page.title }}&labels=feedback" title="Leave feedback on this post (on GitHub)">feedback</a>{% endunless %}
 </header>
-{% if include.frontpage %}{{ page.excerpt }}{% else %}{{ content }}{% endif %}
+{% if include.frontpage %}{{ page.excerpt }}{% else %}{% include anchor_headings.html html=content anchorBody='#' anchorClass='anchor' %}{% endif %}
 </article>
