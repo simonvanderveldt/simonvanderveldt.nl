@@ -1,5 +1,6 @@
 # Site settings
 title: "Simon van der Veldt"
+description: ""
 baseurl: ""
 url: "http://simonvanderveldt.nl"
 author: Simon van der Veldt
@@ -15,7 +16,14 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-seo-tag
   - jekyll-sitemap
+
+social:
+  links:
+    - https://github.com/simonvanderveldt
+    - https://keybase.io/simonvanderveldt
+    - https://www.linkedin.com/in/simonvanderveldt
 
 defaults:
   -

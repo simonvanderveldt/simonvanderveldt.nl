@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
-    <link href="https://plus.google.com/100739856147735932449" rel="author" />
     <link href="/assets/css/theme.css" rel="stylesheet" type="text/css"/>
     {% if page.css %}<link href="/assets/css/{{ page.css }}" rel="stylesheet" type="text/css"/>{% endif %}
     <link href="https://fonts.googleapis.com/css?family=Lato:300italic,300" rel="stylesheet" type="text/css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+    {% seo %}
   </head>
 
   <body>
