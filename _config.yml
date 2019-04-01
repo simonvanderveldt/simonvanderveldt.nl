@@ -9,6 +9,7 @@ include: ["_pages"]
 exclude: ["vendor"]
 
 # Build settings
+theme: null
 kramdown:
   hard_wrap: true
 sass:
