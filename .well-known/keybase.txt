@@ -1,0 +1,88 @@
+==================================================================
+https://keybase.io/simonvanderveldt
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://simonvanderveldt.nl
+  * I am simonvanderveldt (https://keybase.io/simonvanderveldt) on keybase.
+  * I have a public key with fingerprint 3E31 4357 A395 6592 DD9A  ED49 D9C1 C577 A706 0E45
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d6259d8322df1a48f8237c9d76cc3e2960a250a7601a1184e0dc4e0913f2777a0a",
+      "fingerprint": "3e314357a3956592dd9aed49d9c1c577a7060e45",
+      "host": "keybase.io",
+      "key_id": "d9c1c577a7060e45",
+      "kid": "010105590eefebdb983b7bfd9b62434e663b81d59f66241068733f5df2772da97c8f0a",
+      "uid": "eb8f83de6e4dfd5c316910f35e239c19",
+      "username": "simonvanderveldt"
+    },
+    "merkle_root": {
+      "ctime": 1565000402,
+      "hash_meta": "8a9160e3e98811bae3af03082727f9dec7984191134dbfe5cd48a282fa054607",
+      "seqno": 5940262
+    },
+    "revoke": {
+      "sig_ids": [
+        "677cb28d6546b9b42de291f5063656ce369aa0736010854ce65983e24a420e230f"
+      ]
+    },
+    "service": {
+      "hostname": "simonvanderveldt.nl",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1565000407,
+  "expire_in": 157680000,
+  "prev": "7edb08b65a4bf337628577f7f294614ea29935e5e555e71df3bb72e6baa28d35",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMQDAnicdVMLbBRFGL62gHiVR0CLjUB1g2hsxdmd3ZmdU0hKgRQw5SlCS3PM7sy2
+12tv2729KxWrFrC8bIKoIKEVpFGoIEpRS0MwoXAND21ixdDyMEWwKTRVQw2tGMW5
+RmJiNJPsZibf//3f/30zp0YlebwJnSdi5ftGjJ6dcK5lfcSTn514YY1k2KxC8q2R
+gnzox4sZD7v+YIBJPgnICmBI0QjToaIwS6aqbukKxCZhGJkm5ApBgCoaoBgBmcqy
+rnLATPEhMrQUjDEFVMqQrECogDulTiDkClrIoaxCDVNINKQRhTFCOVMJI6ZsaqIG
+AwS4qonCQjscrxDiDBrm0wK2OBMb/5C8/8Df0y2WphHAucUNZhAdGtiwGDGQokKV
+IwQNXWYasZA4kAHSMYSWxuKKFUYJNnVrSHdkiI4bYmrIOOIqs5hmQhkRGVhQ4woU
+EkgcGOZOiJZwgQ4HSuxQlIYYd6LCTVeqzJBKuBMs5n7Htt24yaYbiENlMT0AQAWK
+GJSGC/0l3KWCQadEFgNBTnRdlg3KIbUABLqCFWwRxk1MdFUmsgxVZlhcM5mqU0VX
+LAo0FQEs9IR5WciWfBoR5EgRChwetYM83jwcKBD2hSVfnoQwNg1FZ0iUGcRQFSYC
+lS0NIIg0ZHKICKUAQ5Et0DXV5CItXYSuUlUBYnhgSfmV8WZONGAOkcfz+h8fpoWK
+hbBSx3Zt0y4WgELXLfXF3XErSuMF5dzw/03lNwIhJu6MKIhyJxywQ8Itgfy3cThD
+4qtLAw73B+IIDSNdnIN4Gx4VlJgzA+gG0qhqWBBipOjivljYUoiKZJVThRARo1ia
+xrHMLGgYWOHIoMJPBrV/nFRERi4tGJqrIETdiMOlypYTK4d5EryeEcMT44/J471/
+7L0nFuwfczd4flEWGZtMMxbkTSjLXBvq7G4rb0mlefnnqx6+2PnGgzvfWT31reMz
+O8p2l14qfCi5Y1J1euH2kY+vWh7K7izydJ+/VbShoWgHza1J33M2VHUkZdST49o+
+Dh7S2jcRb3ZxV9fEuw05Z7ZcfqYys7ox+l7H+GXHpkyb+dXOV71L3G9O9dX1dl/1
+DESn1odfuplUfHPLjsULuxZ4N8+pahh7+eCSL7r+LLmWO31pQfMI2b68a4eX6i9+
+mIRiaZMvxSLjJ85r21WXdYDOXpJTXrvly6qnVp4dl3SxOf922vr9g3fatq69sX/n
+Y6eNU/NnGFub7cbkjZ93ptcMLr00Oqf6uVjNjytObqpzfj+yOJNOSh1+pemTlNZR
+XzcfTP4tNTvxlcTaW86bt9uP+Fbuurow1rOhfk3dzcF1oLVu+8QpNZ+m135/PC13
+RXt974K5ry9+/uh8aRvBXS+f2FDQetrXSHHWC61v74n0FHkiTcOulcwdvrHu6cEf
+Hnmi7/3Ts46dmX+ot+nctjE5vY/27S77bnB6z8kDf7xWvfyOkRlLHbhTMWdGw6yu
+nnfboklNKat+2l54ONbyS/+iZW7WjUWo4nDtBy1ncz+6MHJzfcrIzPtO7olNxgd/
+7jevZuY3Lmy/fn3ft82bds87ejhtfd7U6nRlwsADWn5Od5pv768Dm89d+6xvHXi2
+bKOlJ0zuz7qyP3CgsWNv5OJf75IJMA==
+=q/0k
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/simonvanderveldt
+
+==================================================================
