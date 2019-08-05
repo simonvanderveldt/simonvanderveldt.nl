@@ -5,7 +5,7 @@ baseurl: ""
 url: "http://simonvanderveldt.nl"
 author: Simon van der Veldt
 permalink: /:title
-include: ["_pages", ".well-known"]
+include: [".well-known"]
 exclude: ["vendor"]
 
 # Build settings
