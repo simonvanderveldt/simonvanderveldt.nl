@@ -20,27 +20,18 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-social:
-  links:
-    - https://github.com/simonvanderveldt
-    - https://keybase.io/simonvanderveldt
-    - https://www.linkedin.com/in/simonvanderveldt
-
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "drafts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
