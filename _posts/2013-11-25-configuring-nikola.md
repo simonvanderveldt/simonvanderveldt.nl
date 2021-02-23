@@ -1,4 +1,4 @@
---- 
+---
 tags: webdevelopment python
 css: code.css
 ---
@@ -109,7 +109,7 @@ Untill I've figured out what I want to use for comments on this site (I'm lookin
 
 ```python
 COMMENT_SYSTEM = ""
-``` 
+```
 
 
 # Disable some unnecessary parts from being created
@@ -146,7 +146,7 @@ READ_MORE_LINK = ""
 
 
 # Disable social buttons
-By default some form of a social button widget is enabled. This actually isn't part of the themplates but of the conf.py (which is bad design imho). Luckily it's easy to disabled, just set SOCIAL_BUTTONS_CODE to an empty string
+By default some form of a social button widget is enabled. This actually isn't part of the templates but of the conf.py (which is bad design imho). Luckily it's easy to disable, just set SOCIAL_BUTTONS_CODE to an empty string
 
 ```python
 SOCIAL_BUTTONS_CODE = ""
