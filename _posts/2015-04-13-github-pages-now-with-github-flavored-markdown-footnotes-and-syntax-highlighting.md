@@ -40,7 +40,7 @@ Et voilà, footnotes[^1]!
 Note: If you want to enable some nice "smart" typographic punctuation enhancements you can add the `smart` extension, which enables [SmartyPants](http://daringfireball.net/projects/smartypants/).
 
 
-### syntax highlighting with Pygments
+### Syntax highlighting with Pygments
 The [old Kramdown setup]({% post_url 2013-09-09-jekyll-github-flavored-markdown-and-footnotes %}) didn't support syntax highlighting on GitHub Pages because Kramdown doesn't support Pygments, the only syntax highlighter currently available on GitHub Pages. It only supports the [Coderay](http://kramdown.gettalong.org/syntax_highlighter/coderay.html) and [Rouge](http://kramdown.gettalong.org/syntax_highlighter/rouge.html) syntax highlighters and these are unavailable when building on [GitHub Pages](https://pages.github.com/versions/).
 
 To use Pygments we only have to set the `highlighter` option in `_config.yml` to `pygments`:
