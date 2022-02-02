@@ -1,162 +1,164 @@
 ---
 ---
+$background: #131313;
+$foreground: #ffffff;
+$middleground: #aaa;
 
-@import "colors";
+@font-face {
+  font-family: "TeX Gyre Heros";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/texgyreheros-regular.woff2) format("woff2");
+}
 
-body {
-	background: $background;
-    color: $foreground;
-	font: 300 16px/26px lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-top: 20px;
+@font-face {
+  font-family: "TeX Gyre Heros";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/texgyreheros-bold.woff2) format("woff2");
+}
+
+// Top level and generic config
+html {
+  background: $background;
+  font: 400 1.375em/1.4em "TeX Gyre Heros", Helvetica, "Liberation Sans", Arial, sans-serif;
+  color: $foreground;
 }
 
 a {
-    color: $link;
-    text-decoration: none;
+  color: $foreground;
+  text-decoration: none;
 }
 
-a:hover {
-    border-bottom: 1px solid $link;
+p {
+  word-wrap: break-word;
 }
 
-body > header, body > main, body > footer, body > article {
-    max-width: 38em;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
+// Layout
+body > header, body > main, body > footer {
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+// Site header
 body > header {
-    font-weight: bold;
-}
-
-body > header > h1 {
-    margin: 8px auto;
-}
-
-body > header a {
-    color: $foreground;
-}
-
-body > header a:hover {
-    color: $link;
-    border-bottom: none;
+  font-weight: bold;
 }
 
 body > header > nav > a {
-    padding: 1px 3px 2px;
+  padding: 0.05em 0.15em 0.1em;
 }
 
+// Site footer
+body > footer {
+  font-size: 0.65rem;
+  color: $middleground;
+}
+
+// Articles
 main > article {
-    padding-bottom: 10px;
+  padding-bottom: 0.45em;
 }
 
 article > header > h1 {
-    line-height: initial;
-    margin-bottom: 12px;
+  font-size: 1.75rem;
+  line-height: 1em;
+  margin-bottom: 0.05em;
 }
 
-article > header > h1 > a {
-    color: $header;
-}
-
-article > header > h1 > a:hover {
-    border-bottom: 1px solid $header;
+article > h2, article > h3 {
+  margin-bottom: 0.05em;
 }
 
 article > h2 > a.anchor,
 article > h3 > a.anchor {
-    visibility: hidden;
+  color: $middleground;
+  visibility: hidden;
 }
 
 article > h2:hover > a.anchor,
 article > h3:hover > a.anchor {
-    visibility: visible;
+  visibility: visible;
 }
 
 article > h2 > a.anchor:hover,
 article > h3 > a.anchor:hover {
-    border-bottom: none;
+  border-bottom: none;
 }
 
-article > header > p, body > footer > small {
-    color: $meta;
-    font-size: 0.9rem;
+article > p {
+  margin-top: 0.725em;
 }
 
-p {
-    word-wrap: break-word;
+article > p > a {
+  border-bottom: 1px solid $foreground;
 }
 
-.pager {
-    list-style: none;
-    padding: 0;
+article > p > code {
+  background-color: grey;
+  padding: 0.125em 0.25em;
+  border-radius: 0.2em;
 }
 
-.pager > .previous {
-    float:left;
-    width: 50%;
-}
-
-.pager > .next {
-    float:right;
-    text-align: right;
-    width: 50%;
-}
-
-.pager:after {
-    content: " ";
-    clear: both;
-    display: table;
-    height: 0px;
+article > footer {
+  font-size: 0.65rem;
+  color: $middleground;
 }
 
 .footnotes > ol {
-    padding-left: 20px;
-    font-size: 0.9rem;
+  font-size: 0.9rem;
+  padding-left: 1em;
 }
 
 .highlight > pre {
-    overflow: scroll;
+  overflow: scroll;
 }
 
 .alert {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 3px;
+  background-color: grey;
+  padding: 0.45em;
+  margin-bottom: 0.9em;
+  border-radius: 0.15em;
 }
 
-.alert > a {
-    color: $foreground;
-    font-weight: bold;
+// Pager
+.pager {
+  list-style: none;
+  padding: 0;
 }
 
-.alert-info {
-    background-color: $info;
+.pager > .previous {
+  float:left;
+  width: 50%;
 }
 
-.alert-warning {
-    background-color: $warning;
+.pager > .next {
+  float:right;
+  text-align: right;
+  width: 50%;
+}
+
+.pager:after {
+  content: " ";
+  clear: both;
+  display: table;
+  height: 0px;
 }
 
 
-@media screen and (min-width: 42em) {
+@media screen and (max-width: 42em) {
+  body > header, body > main, body > footer {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 
-body > header, body > main, body > footer, body > article {
-    padding-left: 0;
-    padding-right: 0;
-}
+  // Make site header slightly smaller to fit in on a single line
+  body > header {
+    font-size: 0.8rem;
+  }
 
-article > header > h1 {
-    font-size: 2.4rem;
-}
-
-article > h2 {
-    margin-top: 30px;
-}
-
-article > h3 {
-    margin-top: 24px;
-}
+  article > header > h1 {
+    font-size: 1.5rem;
+  }
 }
