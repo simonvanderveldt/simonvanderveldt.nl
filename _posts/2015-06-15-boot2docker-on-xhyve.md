@@ -79,7 +79,7 @@ Start by creating a virtual hard disk image. The `count` number is the size in G
 $ dd if=/dev/zero of=boot2docker/hdd.img bs=1g count=20
 ```
 
-boot2docker in Virtualbox automatically creates an ext4 partition and labels it with `boot2docker-data`. Then during boot boot2docker checks if a partition exists with this label and uses it as it's persistant partition.
+boot2docker in Virtualbox automatically creates an ext4 partition and labels it with `boot2docker-data`. Then during boot boot2docker checks if a partition exists with this label and uses it as its persistant partition.
 
 Since none of this works automatically with xhyve some manual steps are necessary. First change the `xhyve-boot2docker.sh` script to add the `boot2docker.hdd.img` image as a harddisk:
 

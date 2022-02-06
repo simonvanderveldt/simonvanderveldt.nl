@@ -9,8 +9,8 @@ excerpt_separator: <!--more-->
 **Update:** As of Jekyll 2.0.0 it's possible to have our GitHub Pages cake and eat it :)
 See this [new post]({% post_url 2015-04-13-github-pages-now-with-github-flavored-markdown-footnotes-and-syntax-highlighting %}) for more details.
 
-[Jekyll](http://jekyllrb.com/) uses [redcarpet](https://github.com/vmg/redcarpet) as it's default [Markdown](http://daringfireball.net/projects/markdown/) parser for newly generated sites as of version [v1.1.0](https://github.com/mojombo/jekyll/pull/1245). It does so by setting `markdown: redcarpet` in `_config.yml`.
-Redcarpet is the markdown parser used by GitHub, but in it's default config it actually doesn't parse using the [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) (GFM) rules.
+[Jekyll](http://jekyllrb.com/) uses [redcarpet](https://github.com/vmg/redcarpet) as its default [Markdown](http://daringfireball.net/projects/markdown/) parser for newly generated sites as of version [v1.1.0](https://github.com/mojombo/jekyll/pull/1245). It does so by setting `markdown: redcarpet` in `_config.yml`.
+Redcarpet is the markdown parser used by GitHub, but in its default config it actually doesn't parse using the [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) (GFM) rules.
 
 <!--more-->
 

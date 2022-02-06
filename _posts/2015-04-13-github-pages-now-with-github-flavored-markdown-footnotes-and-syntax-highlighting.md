@@ -15,7 +15,7 @@ Building your site locally and then pushing the resulting HTML is a thing of the
 <!--more-->
 
 ## Intro
-As of Redcarpet version [3.1.0](https://github.com/vmg/redcarpet/blob/master/CHANGELOG.md#version-310) Markdown footnotes support was added. Since both [Jekyll 2.0.0](https://github.com/jekyll/jekyll/blob/master/History.markdown#200--2014-05-06) updated it's Redcarpet dependency to this version and GitHub Pages's version of Jekyll has been [updated to version 2.2.0](https://github.com/blog/1867-github-pages-now-runs-jekyll-2-2-0) as of [30.06.2014](https://github.com/github/pages-gem/pull/75#event-147277642) as well this finally allows us to enable all GitHub Flavored Markdown features using Redcarpet's extension as well as having syntax highlighting when using GitHub Pages to build our website! :)
+As of Redcarpet version [3.1.0](https://github.com/vmg/redcarpet/blob/master/CHANGELOG.md#version-310) Markdown footnotes support was added. Since both [Jekyll 2.0.0](https://github.com/jekyll/jekyll/blob/master/History.markdown#200--2014-05-06) updated its Redcarpet dependency to this version and GitHub Pages's version of Jekyll has been [updated to version 2.2.0](https://github.com/blog/1867-github-pages-now-runs-jekyll-2-2-0) as of [30.06.2014](https://github.com/github/pages-gem/pull/75#event-147277642) as well this finally allows us to enable all GitHub Flavored Markdown features using Redcarpet's extension as well as having syntax highlighting when using GitHub Pages to build our website! :)
 
 ## Setup
 The basic setup consist of the [Redcarpet](https://github.com/vmg/redcarpet) Markdown parser with several extensions enabled combined with [Pygments](http://pygments.org) for syntax highlighting.
