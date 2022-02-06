@@ -1,0 +1,50 @@
+name: Build and deploy to staging
+on: [pull_request, workflow_dispatch]
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare staging build
+        run: |
+          # Make sure the staging site doesn't get indexed
+          sed -i '/<head>/ a\    <meta name="robots" content="noindex">' _layouts/default.html
+          # actions/jekyll-build-pages runs in a container as root
+          # so files created by it are owned by root:root.
+          # Pre-create the _site directory and use setgid to make sure files are created with the github runner gid
+          mkdir _site
+          chmod g+s _site
+      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/upload-artifact@v2
+        with:
+          path: _site/
+  Deploy:
+    needs: [Build]
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://simonvanderveldt.github.io/staging/
+    steps:
+      - name: Set GitHub Actions as commit author
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+      - name: Checkout staging repo
+        uses: actions/checkout@v2
+        with:
+          repository: simonvanderveldt/staging
+          ssh-key: ${{ secrets.STAGING_DEPLOY_SSH_KEY }}
+      - uses: actions/download-artifact@v2
+        with:
+          name: artifact
+      - name: Push to staging repo
+        run: |
+          ls -ahl
+          # Site has already been built, so make sure it doesn't get built again
+          touch .nojekyll
+          # Staging site isn't published on a custom domain, so remove the CNAME config
+          rm CNAME
+          ls -ahl
+          git add .
+          git commit -m "Deploy commit $GITHUB_SHA"
+          git push

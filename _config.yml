@@ -6,7 +6,7 @@ url: "http://simonvanderveldt.nl"
 author: Simon van der Veldt
 permalink: /:title
 include: [".well-known"]
-exclude: ["vendor"]
+exclude: ["vendor", "README.md"]
 
 # Build settings
 theme: null
