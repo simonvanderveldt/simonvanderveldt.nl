@@ -1,4 +1,4 @@
-name: Build and deploy to staging
+name: Build, validate and deploy to staging
 on: [pull_request, workflow_dispatch]
 jobs:
   Build:
@@ -18,6 +18,24 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           path: _site/
+  Validate:
+    needs: [Build]
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.9-slim
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: artifact
+      - run: |
+          pwd
+          ls -ahl
+      - run: |
+          mkdir -p /usr/share/man/man1/
+          apt-get -qq update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -qq default-jre
+          pip install html5validator==0.4.0 PyYAML==6.0
+      - run: html5validator --also-check-css
   Deploy:
     needs: [Build]
     runs-on: ubuntu-latest
