@@ -38,6 +38,21 @@ jobs:
           DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -qq default-jre
           pip install html5validator==0.4.0 PyYAML==6.0
       - run: html5validator --also-check-css
+  check-links:
+    name: Check broken links
+    needs: [Build]
+    runs-on: ubuntu-latest
+    container:
+      image: ruby
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: artifact
+      - run: |
+          gem install html-proofer -v 3.19.3
+          # Ignore 999 because LinkedIn is being annoying and returns 999 for any request done to
+          # their site that isn't a browser :|
+          htmlproofer --assume-extension --http_status_ignore="999"
   deploy:
     name: Deploy
     needs: [Build]
