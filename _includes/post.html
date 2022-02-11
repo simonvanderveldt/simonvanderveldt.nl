@@ -4,12 +4,12 @@
   </header>
   {% if include.frontpage %}{{ page.excerpt }}{% else %}{% include anchor_headings.html html=content anchorBody='#' anchorClass='anchor' %}{% endif %}
   <footer>
-    <time itemprop="datePublished" datetime={{ page.date | date_to_xmlschema }}>{{ page.date | date: "%-d %B %Y" }}</time>
+    {{ page.date | date: "%-d %B %Y" }}
     {% if page.tags.size > 0 %}in
       {% for tag in page.tags %}
         <a href="/posts-about/{{ tag }}/">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
       {% endfor %}
     {% endif %}
-    {% unless include.frontpage %} | <a href="https://github.com/simonvanderveldt/simonvanderveldt.github.io/issues/new?title=Feedback on post: {{ page.title }}&labels=feedback" title="Leave feedback on this post (on GitHub)">feedback</a>{% endunless %}
+    {% unless include.frontpage %} | {% assign feedback_title =  %}<a href="https://github.com/simonvanderveldt/simonvanderveldt.github.io/issues/new?title={{ "Feedback on post: " | append: page.title | cgi_escape }}&labels=feedback" title="Leave feedback on this post (on GitHub)">feedback</a>{% endunless %}
   </footer>
 </article>
