@@ -24,7 +24,7 @@ The basic setup consist of the [Redcarpet](https://github.com/vmg/redcarpet) Mar
 ### GitHub Flavored Markdown with Redcarpet
 We start with the same settings as in the [old Redcarpet setup]({% post_url 2013-09-09-jekyll-github-flavored-markdown-and-footnotes %}) and simply add `footnotes` to the list of extensions we want to enable in `_config.yml`.
 
-Also, `fenced_code_blocks` can be removed as this is already being set by [Jekyll](https://github.com/jekyll/jekyll/blob/master/lib/jekyll/converters/markdown/redcarpet_parser.rb#L95).
+Also, `fenced_code_blocks` can be removed as this is already being set by [Jekyll](https://github.com/jekyll/jekyll/blob/c576d239089ed301d0c003b8afd394271cca912c/lib/jekyll/converters/markdown/redcarpet_parser.rb#L95).
 
 ```yaml
 redcarpet:

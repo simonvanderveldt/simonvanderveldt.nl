@@ -34,13 +34,13 @@ $ mkdir boot2docker
 $ cp xhyverun.sh xhyve-boot2docker.sh
 ```
 
-xhyve currently doesn’t come with a BIOS or EFI booter. This means it's necessary to [extract](https://github.com/boot2docker/boot2docker/blob/master/doc/AUTOMATED_SCRIPT.md#extracting-initrd-and-vmlinuz64) the kernel and initrd from boot2docker and pass them to xhyve manually.
+xhyve currently doesn’t come with a BIOS or EFI booter. This means it's necessary to [extract](https://github.com/boot2docker/boot2docker/blob/f996284ecf003356e6d749394e95804dc62708e8/doc/AUTOMATED_SCRIPT.md#extracting-initrd-and-vmlinuz64) the kernel and initrd from boot2docker and pass them to xhyve manually.
 
 The simplest way to do so is to mount the boot2docker iso which can be found in `~/.boot2docker/boot2docker.iso` and then copying the `initrd.img` and `vmlinuz64` from the `boot` directory of the mounted volume to the `boot2docker` directory.
 
 ## Prepare the xhyve-boot2docker.sh file
 Configurtion of the xhyve virtual machine is done through command line arguments. The `xhyverun.sh`/`xhyve-boot2docker.sh` shell scripts make this a bit easier and more transparent.
-To match the virtual machine [specs from boot2docker](https://github.com/boot2docker/boot2docker/blob/master/doc/FAQ.md#what-are-the-specs-of-the-vm) edit the `xhyve-boot2docker.sh` file so it reads like this:
+To match the virtual machine [specs from boot2docker](https://github.com/boot2docker/boot2docker/blob/f996284ecf003356e6d749394e95804dc62708e8/doc/FAQ.md#what-are-the-specs-of-the-vm) edit the `xhyve-boot2docker.sh` file so it reads like this:
 
 ```bash
 #!/bin/sh
@@ -60,7 +60,7 @@ LPC_DEV="-l com1,stdio"
 build/xhyve $MEM $SMP $PCI_DEV $LPC_DEV $NET $IMG_CD $IMG_HDD $UUID -f kexec,$KERNEL,$INITRD,"$CMDLINE"
 ```
 
-The `CMDLINE` is taken from the boot2docker [isolinux configuration](https://github.com/boot2docker/boot2docker/blob/master/rootfs/isolinux/isolinux.cfg#L7Kernel).
+The `CMDLINE` is taken from the boot2docker [isolinux configuration](https://github.com/boot2docker/boot2docker/blob/f996284ecf003356e6d749394e95804dc62708e8/rootfs/isolinux/isolinux.cfg#L7Kernel).
 
 ## Start the xhyve boot2docker VM
 To be able to access networking xhyve has to be run as root, so start it with `sudo ./xhyve-boot2docker.sh`.
