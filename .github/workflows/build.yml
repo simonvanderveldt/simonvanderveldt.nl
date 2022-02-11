@@ -1,7 +1,8 @@
 name: Build, validate and deploy to staging
 on: [pull_request, workflow_dispatch]
 jobs:
-  Build:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +19,8 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           path: _site/
-  Validate:
+  validate:
+    name: Validate HTML and CSS
     needs: [Build]
     runs-on: ubuntu-latest
     container:
@@ -36,7 +38,8 @@ jobs:
           DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -qq default-jre
           pip install html5validator==0.4.0 PyYAML==6.0
       - run: html5validator --also-check-css
-  Deploy:
+  deploy:
+    name: Deploy
     needs: [Build]
     runs-on: ubuntu-latest
     environment:
