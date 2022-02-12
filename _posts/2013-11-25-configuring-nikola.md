@@ -64,12 +64,12 @@ Using `nikola new_post` will create the post as \*.md file as long as markdown i
 
 # Enable GitHub Flavored Markdown
 By default python-markdown uses the rules from [standard markdown](http://daringfireball.net/projects/markdown/), but I prefer the simplicity of [GitHub Flavored Markdown (GFM)](https://help.github.com/articles/github-flavored-markdown).
-Luckily python-markdown comes with a lot of [extensions](http://pythonhosted.org/Markdown/extensions/) that can be easily enabled. To make python-markdown mimic GFM the following extensions have to be enabled:
+Luckily python-markdown comes with a lot of [extensions](https://web.archive.org/web/20181122141519/https://python-markdown.github.io/extensions/) that can be easily enabled. To make python-markdown mimic GFM the following extensions have to be enabled:
 
-* [nl2br](http://pythonhosted.org/Markdown/extensions/nl2br.html): newline to linebreak
-* [fenced_code](http://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): fenced code blocks
-* [smart_strong](http://pythonhosted.org/Markdown/extensions/smart_strong.html): do not boldify multiple underscores in words
-* [codehilite](http://pythonhosted.org/Markdown/extensions/code_hilite.html): syntax highlighting (using [Pygments](http://pygments.org))
+* [nl2br](https://web.archive.org/web/20170917091951/http://pythonhosted.org/Markdown/extensions/nl2br.html): newline to linebreak
+* [fenced_code](https://web.archive.org/web/20130328133516/http://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): fenced code blocks
+* [smart_strong](https://web.archive.org/web/20130328133343/http://pythonhosted.org/Markdown/extensions/smart_strong.html): do not boldify multiple underscores in words
+* [codehilite](https://web.archive.org/web/20130403084416/http://pythonhosted.org/Markdown/extensions/code_hilite.html): syntax highlighting (using [Pygments](http://pygments.org))
 
 Note that some funcionality is missing, but can be provided using third party extensions:
 
@@ -88,7 +88,7 @@ Codehilite's `linenums=table` argument uses Pygments to add linenumbers in a sep
 
 
 # Enable footnotes in markdown
-Footnots in markdown can be used by enabling the [footnotes extension](http://pythonhosted.org/Markdown/extensions/footnotes.html).
+Footnots in markdown can be used by enabling the [footnotes extension](https://web.archive.org/web/20130328133527/http://pythonhosted.org/Markdown/extensions/footnotes.html).
 
 ```python
 MARKDOWN_EXTENSIONS = ["footnotes"]

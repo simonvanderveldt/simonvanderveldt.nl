@@ -10,6 +10,6 @@
         <a href="/posts-about/{{ tag }}/">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
       {% endfor %}
     {% endif %}
-    {% unless include.frontpage %} | {% assign feedback_title =  %}<a href="https://github.com/simonvanderveldt/simonvanderveldt.github.io/issues/new?title={{ "Feedback on post: " | append: page.title | cgi_escape }}&labels=feedback" title="Leave feedback on this post (on GitHub)">feedback</a>{% endunless %}
+    {% unless include.frontpage %} | {% assign feedback_title =  %}<a href="https://github.com/simonvanderveldt/simonvanderveldt.github.io/issues/new?title={{ "Feedback on post: " | append: page.title | url_encode }}&labels=feedback" title="Leave feedback on this post (on GitHub)">feedback</a>{% endunless %}
   </footer>
 </article>
