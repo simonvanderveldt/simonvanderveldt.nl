@@ -26,7 +26,7 @@ jobs:
     container:
       image: python:3.9-slim
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: artifact
       - run: |
@@ -45,7 +45,7 @@ jobs:
     container:
       image: ruby
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: artifact
       - run: |
@@ -70,7 +70,7 @@ jobs:
         with:
           repository: simonvanderveldt/staging.simonvanderveldt.nl
           ssh-key: ${{ secrets.STAGING_DEPLOY_SSH_KEY }}
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: artifact
       - name: Push to staging repo
